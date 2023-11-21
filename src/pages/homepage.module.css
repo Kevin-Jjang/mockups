@@ -22,7 +22,7 @@
 
 .hero {
   display: flex;
-  height: 600px;
+  height: 100vh;
   align-items: center;
   flex-direction: row-reverse;
 }
@@ -39,8 +39,8 @@
 .hero__img__container {
   position: absolute;
   left: -250px;
-  height: 600px;
-  width: 700px;
+  height: 750px;
+  width: 750px;
 }
 
 .animate--rotate {
@@ -57,12 +57,17 @@
   }
 }
 
+.collection__cover .block__img__container {
+  position: relative;
+}
+.collection__cover .block__img {
+  height: inherit;
+}
+
 .block {
   display: flex;
-  margin-top: 32px;
-  margin-left: 32px;
-  margin-right: 32px;
   height: 400px;
+  padding-bottom: 32px;
   /* grid-template-columns: 1fr 1fr; */
   gap: 24px;
 }
@@ -78,12 +83,18 @@
 .block__img {
   flex-basis: 50%;
   position: relative;
-  height: inherit;
+  /* height: inherit; */
 }
 
 .block__img__container {
   width: 100%;
   height: 100%;
+}
+
+.block__img__caption {
+  position: absolute;
+  bottom: -20px;
+  z-index: 1;
 }
 
 
@@ -109,6 +120,10 @@
   text-decoration: underline ;
 }
 
+.genre__container {
+  position: relative;
+}
+
 .genre__container--right .headline {
   text-align: right;
 }
@@ -122,4 +137,38 @@
 .carousel {
   height: 600px;
   background-color: #eee;
+}
+
+
+
+
+.svg__poetry {
+  position: absolute;
+  top: -250px;
+  right: -100px;
+  width: 800px;
+  height: 800px;
+  z-index: -1;
+  fill: #3363431A;
+}
+
+.svg__visual {
+  position: absolute;
+  top: -200px;
+  left: -200px;
+  width: 800px;
+  height: 800px;
+  z-index: -1;
+  fill: #73CDFF1A;
+}
+
+.svg__fiction {
+  position: absolute;
+  bottom: -200px;
+  right: -200px;
+  width: 800px;
+  height: 800px;
+  z-index: -1;
+  fill: #6e1f3f1a;
+  /* fill: linear-gradient(180deg, rgba(110, 31, 63, 0.1) 54.69%, rgba(115, 205, 255, 0) 100%);; */
 }
